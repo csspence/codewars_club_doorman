@@ -18,7 +18,17 @@ TASK
 The function passTheDoorMan with a given string word shall return the right number.
 */
 
-function passTheDoorMan (word){
-
-
+const passTheDoorMan = (word) => {
+  let index;
+  let letter = word[0];
+  for(let i = 1; i < word.length; i++) {
+    if(word[i] === letter) {
+      index = i;
+      break;
+    } else {
+      letter = word[i];
+    }
+  }
+  
+  return (word.charCodeAt(index) - 96) * 3;
 }

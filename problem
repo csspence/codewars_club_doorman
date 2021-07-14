@@ -19,11 +19,11 @@ The function passTheDoorMan with a given string word shall return the right numb
 */
 
 const passTheDoorMan = (word) => {
-  let index;
+  let ind;
   let letter = word[0];
   for(let i = 1; i < word.length; i++) {
     if(word[i] === letter) {
-      index = i;
+      ind = i;
       break;
     } else {
       letter = word[i];
